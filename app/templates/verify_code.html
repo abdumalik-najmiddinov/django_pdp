@@ -1,0 +1,61 @@
+{% load static %}
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="bg-gradient-to-r from-violet-600 to-indigo-600 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100">
+
+    <!-- Verification Form -->
+    <div class="text-center mb-8">
+      <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
+        <!-- Icon -->
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 1a5 5 0 0 0-5 5v4H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm-3 9V6a3 3 0 1 1 6 0v4H9Z"/>
+        </svg>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">Tasdiqlash kodi</h2>
+      <p class="text-gray-600 text-sm">
+        Email manzilingizga yuborilgan 6 xonali kodni kiriting
+      </p>
+    </div>
+
+    <!-- FORM: action AuthView POST -->
+    <form method="POST" action="{% url 'auth' %}" class="space-y-6">
+      {% csrf_token %}
+      <input type="hidden" name="verify_code_submit" value="1">
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Verification code
+        </label>
+        <input
+          type="text"
+          name="verification_code"
+          maxlength="6"
+          placeholder="123456"
+          required
+          class="w-full text-center tracking-widest text-xl px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        >
+      </div>
+
+      {% if error %}
+        <p class="text-red-500 text-sm text-center">{{ error }}</p>
+      {% endif %}
+
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700"
+      >
+        Tasdiqlash
+      </button>
+    </form>
+
+    <p class="text-center text-sm text-gray-600 mt-6">
+      Kod kelmadimi?
+      <a href="{% url 'auth' %}" class="text-blue-600 hover:text-blue-800 font-semibold">
+        Qayta yuborish
+      </a>
+    </p>
+
+  </div>
+</div>

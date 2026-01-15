@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <title>PDP Junior - Bolalar Uchun Dasturlash Akademiyasi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="PDP Junior" name="keywords" />
+    <meta content="PDP Junior bolalar uchun dasturlash va STEM" name="description" />
+
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/download.jpg' %}"  rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+      <nav
+        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+      >
+        <a
+          href=""
+          class="navbar-brand font-weight-bold text-secondary"
+          style="font-size: 50px"
+        >
+          <i class="flaticon-043-teddy-bear"></i>
+          <span class="text-primary">PDP Junior</span>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav font-weight-bold mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Bosh Sahifa</a>
+            <a href="about.html" class="nav-item nav-link">Biz Haqimizda</a>
+            <a href="class.html" class="nav-item nav-link">Kurslar</a>
+            <a href="team.html" class="nav-item nav-link">Ustozlar</a>
+            <a href="gallery.html" class="nav-item nav-link">Qo'llanma</a>
+            <div class="nav-item dropdown">
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Aloqa</a>
+          </div>
+          <a href="/logout" class="btn btn-primary px-4">Chiqish/Login</a>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="min-height: 400px"
+      >
+        <h3 class="display-3 font-weight-bold text-white">PDP Junior Haqida</h3>
+        <div class="d-inline-flex text-white">
+          <p class="m-0"><a class="text-white" href="">Bosh Sahifa</a></p>
+          <p class="m-0 px-2">/</p>
+          <p class="m-0">PDP Junior Haqida</p>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img
+            class="img-fluid rounded mb-5 mb-lg-0"
+            src="{% static 'assets/img/download.jpg' %}"
+            alt="PDP Junior Logo"
+            width="400"> <!-- kerakli kenglik -->
+            />
+
+          </div>
+          <div class="col-lg-7">
+            <p class="section-title pr-5">
+              <span class="pr-2">PDP Juniorni O‘rganing</span>
+            </p>
+            <h1 class="mb-4">PDP Junior: Bolalar Uchun Dasturlash va STEM Akademiyasi</h1>
+            <p>
+              PDP Junior 7 dan 14 yoshgacha bo‘lgan bolalar uchun maxsus dastur bo‘lib,
+              ular dasturlash, robototexnika va raqamli ko‘nikmalarni o‘yinli va interaktiv
+              darslar orqali o‘rganishadi. Bizning maqsadimiz yosh avlodni rivojlantirish,
+              muammolarni hal qilish qobiliyatini oshirish va ularni raqamli dunyoga tayyorlashdir.
+            </p>
+            <div class="row pt-2 pb-4">
+              <div class="col-6 col-md-4">
+              </div>
+              <div class="col-6 col-md-8">
+                <ul class="list-inline m-0">
+                  <li class="py-2 border-top border-bottom">
+                    <i class="fa fa-check text-primary mr-3"></i>Interaktiv dasturlash darslari
+                  </li>
+                  <li class="py-2 border-bottom">
+                    <i class="fa fa-check text-primary mr-3"></i>Robototexnika bilan amaliy mashg‘ulotlar
+                  </li>
+                  <li class="py-2 border-bottom">
+                    <i class="fa fa-check text-primary mr-3"></i>Ijodiy loyihalar orqali ko‘nikmalarni oshirish
+                  </li>
+                  <li class="py-2 border-bottom">
+                    <i class="fa fa-check text-primary mr-3"></i>Raqamli savodxonlik va STEM ko‘nikmalari
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="" class="btn btn-primary mt-2 py-2 px-4">PDP Juniorga Qo'shilish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>
